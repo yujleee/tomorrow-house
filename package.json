@@ -1,0 +1,26 @@
+{
+  "name": "tomorrow-house",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "sass assets/main.scss:assets/css/styles.css",
+    "watching": "sass --watch assets/main.scss:assets/css/styles.css",
+    "noMap": "sass --no-source-map assets/main.scss assets/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yujleee/tomorrow-house.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yujleee/tomorrow-house/issues"
+  },
+  "homepage": "https://github.com/yujleee/tomorrow-house#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}
