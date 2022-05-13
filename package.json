@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "sass assets/main.scss:assets/css/styles.css",
-    "watching": "sass --watch assets/main.scss:assets/css/styles.css",
-    "noMap": "sass --no-source-map assets/main.scss assets/css/styles.css"
+    "compile": "sass stytles/main.scss:styles.css",
+    "watching": "sass --watch styles/main.scss:styles.css",
+    "noMap": "sass --no-source-map styles/main.scss styles.css"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "homepage": "https://github.com/yujleee/tomorrow-house#readme",
   "dependencies": {
     "sass": "^1.51.0"
+  },
+  "devDependencies": {
+    "sass-lint": "^1.13.1"
   }
 }
