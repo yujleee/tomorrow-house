@@ -1,15 +1,19 @@
 * {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: $font-main;
   margin: 0;
 }
 
 html {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: $font-main;
+  font-size: $font-size-16;
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  color: $color-gray-primary;
+  font-family: $font-main;
 }
 
 h1 {
@@ -42,5 +46,5 @@ button {
 ul,
 ol {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
