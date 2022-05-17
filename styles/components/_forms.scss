@@ -1,0 +1,74 @@
+%form-base {
+  @include text-style(16, $color-gray-primary);
+  appearance: none;
+  background-color: $color-white;
+  border: 1px solid $color-gray-border;
+  border-radius: 4px;
+  display: block;
+  height: 40px;
+  padding: 0 16px;
+  transition: background-color 300ms ease-in-out;
+  width: 100%;
+
+  &::placeholder {
+    color: $color-gray-tertiary;
+  }
+
+  &:not(:disabled):hover {
+    background-color: $color-gray-background;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+// select group
+.form-select,
+.form-input {
+  @extend %form-base;
+}
+
+.select-group {
+  position: relative;
+
+  .form-select {
+    padding-right: 40px;
+    text-overflow: ellipsis;
+  }
+
+  &.is-active {
+    .form-select {
+      border-color: $color-blue-primary;
+    }
+
+    .ic-caret {
+      color: $color-blue-primary;
+    }
+  }
+
+  .ic-caret {
+    @include position-center-y;
+    color: $color-gray-tertiary;
+    font-size: 24px;
+    pointer-events: none;
+    right: 8px;
+  }
+}
+
+// input group
+.input-group {
+  position: relative;
+
+  .form-input {
+    padding-left: 40px;
+  }
+
+  .ic-search {
+    @include position-center-y;
+    left: 10px;
+    font-size: 20px;
+    color: $color-gray-secondary;
+  }
+}
