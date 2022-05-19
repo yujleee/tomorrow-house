@@ -12,14 +12,14 @@
 @import './mixins/positions';
 @import './mixins/flexbox';
 
-@import './components/tags';
-@import './components/profiles';
-@import './components/star-ratings';
-@import './components/prices';
-@import './components/buttons';
-@import './components/forms';
-@import './components/pagination';
-@import './components/icons';
+@import './modules/tags';
+@import './modules/profiles';
+@import './modules/star-ratings';
+@import './modules/prices';
+@import './modules/buttons';
+@import './modules/forms';
+@import './modules/pagination';
+@import './modules/icons';
 
 @import './layouts/grids';
 @import './layouts/gnb';
