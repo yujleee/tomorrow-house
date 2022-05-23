@@ -63,9 +63,9 @@
     button {
       width: 100%;
       @include flexbox(start);
+      @include text-style(16, $color-gray-primary);
       height: 44px;
       padding: 0 8px;
-      color: $color-gray-primary;
       border-radius: 2px;
 
       &:hover {
