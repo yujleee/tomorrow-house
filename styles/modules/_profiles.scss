@@ -1,24 +1,28 @@
 %profile-base {
-  border-radius: 50%;
   display: block;
   overflow: hidden;
+  background-image: url(../../assets/images/img-user-default.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
 
   img {
     display: block;
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    width: 100%;
   }
 }
 
 .profile-24 {
   @extend %profile-base;
-  height: 24px;
   width: 24px;
+  height: 24px;
 }
 
 .profile-32 {
   @extend %profile-base;
-  height: 32px;
   width: 32px;
+  height: 32px;
 }
