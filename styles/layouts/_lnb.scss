@@ -1,5 +1,6 @@
 .lnb {
-  height: 40px;
+  $lnb-link-padding: 8px;
+  $grid-margin: $sm-margin + calc($gutter/2);
   overflow-x: auto;
 
   &::-webkit-scrollbar {
@@ -8,18 +9,14 @@
 
   &-list {
     @include inline-flexbox(start);
-    position: relative;
-    left: -8px;
+    height: 40px;
+    padding: 0 calc($grid-margin - $lnb-link-padding);
+    margin-left: -15px;
     white-space: nowrap;
+    border-bottom: 1px solid $color-gray-border;
   }
 
   &-item {
-    margin-right: 8px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
     &:hover {
       a {
         color: $color-blue-primary;
@@ -29,7 +26,7 @@
     &.is-active {
       a {
         color: $color-blue-primary;
-        border-bottom: 2px solid $color-blue-primary;
+        border-bottom-color: $color-blue-primary;
       }
     }
 
@@ -37,12 +34,9 @@
       @include inline-flexbox;
       @include text-style(13, $color-gray-primary);
       height: 40px;
-      padding: 0 8px;
+      padding: 0 $lnb-link-padding;
       font-weight: 700;
-
-      .ic-new {
-        color: $color-red;
-      }
+      border-bottom: 2px solid transparent;
     }
   }
 }
