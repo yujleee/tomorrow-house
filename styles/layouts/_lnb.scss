@@ -1,4 +1,6 @@
 .lnb {
+  $lnb-height-sm: 40px;
+  $lnb-height-md: 50px;
   $lnb-link-padding: 8px;
   $grid-margin: $sm-margin + calc($gutter/2);
   overflow-x: auto;
@@ -7,7 +9,7 @@
 
   &-list {
     @include inline-flexbox(start);
-    height: 40px;
+    height: $lnb-height-sm;
     padding: 0 calc($grid-margin - $lnb-link-padding);
     margin-left: -15px;
     white-space: nowrap;
@@ -15,12 +17,6 @@
   }
 
   &-item {
-    &:hover {
-      a {
-        color: $color-blue-primary;
-      }
-    }
-
     &.is-active {
       a {
         color: $color-blue-primary;
@@ -31,10 +27,34 @@
     a {
       @include inline-flexbox;
       @include text-style(13, $color-gray-primary);
-      height: 40px;
+      height: $lnb-height-sm;
       padding: 0 $lnb-link-padding;
       font-weight: 700;
       border-bottom: 2px solid transparent;
+
+      &:hover {
+        color: $color-blue-primary;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    height: 50px;
+    overflow-x: visible;
+    border-bottom: 1px solid $color-gray-border;
+
+    &-list {
+      height: auto;
+      padding: 0;
+      margin-left: 0;
+      border-bottom: 0;
+    }
+
+    &-item {
+      a {
+        @include text-style(14);
+        height: $lnb-height-md;
+      }
     }
   }
 }
