@@ -13,6 +13,8 @@
   transition: transform 300ms ease-in-out;
   overscroll-behavior: contain;
 
+  @include no-scrollbar;
+
   &.is-active {
     transform: translate3d(0, 0, 0);
   }
@@ -94,8 +96,5 @@
         }
       }
     }
-  }
-
-  &::-webkit-scrollbar {
   }
 }
