@@ -1,0 +1,48 @@
+.lnb {
+  height: 40px;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-list {
+    @include inline-flexbox(start);
+    position: relative;
+    left: -8px;
+    white-space: nowrap;
+  }
+
+  &-item {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      a {
+        color: $color-blue-primary;
+      }
+    }
+
+    &.is-active {
+      a {
+        color: $color-blue-primary;
+        border-bottom: 2px solid $color-blue-primary;
+      }
+    }
+
+    a {
+      @include inline-flexbox;
+      @include text-style(13, $color-gray-primary);
+      height: 40px;
+      padding: 0 8px;
+      font-weight: 700;
+
+      .ic-new {
+        color: $color-red;
+      }
+    }
+  }
+}
