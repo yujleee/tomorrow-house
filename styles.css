@@ -513,32 +513,56 @@ address {
   height: 32px;
 }
 
-.star-rating-24, .star-rating-20, .star-rating-16, .star-rating-13 {
+.star-rating-13 {
   align-items: center;
   display: flex;
   justify-content: flex-start;
+  font-size: 13px;
 }
-.star-rating-24 .ic-star, .star-rating-20 .ic-star, .star-rating-16 .ic-star, .star-rating-13 .ic-star {
+.star-rating-13 .ic-star {
   color: #e0e2e7;
 }
-.star-rating-24 .ic-star.is-active, .star-rating-20 .ic-star.is-active, .star-rating-16 .ic-star.is-active, .star-rating-13 .ic-star.is-active {
+.star-rating-13 .ic-star.is-active {
   color: #3da5f5;
 }
 
-.star-rating-13 {
-  font-size: 13px;
-}
-
 .star-rating-16 {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
   font-size: 16px;
+}
+.star-rating-16 .ic-star {
+  color: #e0e2e7;
+}
+.star-rating-16 .ic-star.is-active {
+  color: #3da5f5;
 }
 
 .star-rating-20 {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
   font-size: 20px;
+}
+.star-rating-20 .ic-star {
+  color: #e0e2e7;
+}
+.star-rating-20 .ic-star.is-active {
+  color: #3da5f5;
 }
 
 .star-rating-24 {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
   font-size: 24px;
+}
+.star-rating-24 .ic-star {
+  color: #e0e2e7;
+}
+.star-rating-24 .ic-star.is-active {
+  color: #3da5f5;
 }
 
 .price-off, .price-16,
@@ -1262,6 +1286,311 @@ i {
   .breadcrumb a:hover {
     opacity: 0.4;
   }
+}
+
+.product-carousel {
+  position: relative;
+}
+.product-carousel-slider {
+  margin: 0 -15px;
+}
+.product-carousel-thumbnail {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 16px;
+}
+.product-carousel-thumbnail .thumbnail-list {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.product-carousel-thumbnail .thumbnail-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 4px;
+}
+.product-carousel-thumbnail .thumbnail-item.tns-nav-active button {
+  opacity: 1;
+  transform: scale(1.33333);
+}
+.product-carousel-thumbnail .thumbnail-item button {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: transform 200ms ease-in-out, transform 200ms ease-in-out;
+}
+.product-carousel-thumbnail .thumbnail-item img {
+  display: none;
+}
+.product-carousel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 720px) {
+  .product-carousel {
+    padding-right: 30px;
+  }
+  .product-carousel-slider {
+    margin: 0 0 8px 0;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .product-carousel-thumbnail {
+    position: static;
+    transform: none;
+  }
+  .product-carousel .thumbnail-list {
+    justify-content: flex-start;
+  }
+  .product-carousel .thumbnail-item {
+    margin: 0 8px 0 0;
+  }
+  .product-carousel .thumbnail-item.tns-nav-active button {
+    border: 2px solid #3da5f5;
+    transform: none;
+  }
+  .product-carousel .thumbnail-item button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    border-radius: 4px;
+    opacity: 1;
+  }
+  .product-carousel .thumbnail-item img {
+    display: block;
+    width: 56px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-carousel {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+  }
+  .product-carousel-slider {
+    width: 500px;
+    height: 500px;
+  }
+  .product-carousel-thumbnail {
+    margin-right: 8px;
+  }
+  .product-carousel .thumbnail-list {
+    flex-direction: column;
+  }
+  .product-carousel .thumbnail-item {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .product-carousel .thumbnail-item button,
+.product-carousel .thumbnail-item img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+.product-info {
+  padding: 20px 0;
+}
+.product-info-header {
+  margin-bottom: 16px;
+}
+.product-info-header .info-brand {
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  line-height: 20px;
+  color: #3da5f5;
+  font-weight: 700;
+}
+.product-info-header .info-brand:active {
+  opacity: 0.4;
+}
+.product-info-header .info-title {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  line-height: 28px;
+  color: #191a20;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+.product-info-header .info-review {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+.product-info-header .info-review .star-rating {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 13px;
+  margin-right: 8px;
+}
+.product-info-header .info-review .star-rating .ic-star {
+  color: #e0e2e7;
+}
+.product-info-header .info-review .star-rating .ic-star.is-active {
+  color: #3da5f5;
+}
+.product-info-header .info-review p {
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  line-height: 20px;
+  color: #3da5f5;
+  font-weight: 700;
+}
+.product-info-price {
+  margin-bottom: 16px;
+}
+.product-info-price .info-original-price,
+.product-info-price .info-sale-price {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+.product-info-price .discount-rate {
+  align-items: center;
+  display: inline-flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #3da5f5;
+}
+.product-info-price .discount-rate .rate {
+  font-family: "Tahoma", san-serif;
+}
+.product-info-price .info-sale-price {
+  margin-bottom: 12px;
+}
+.product-info-price .price-20 {
+  margin-right: 8px;
+}
+.product-info-price .info-point {
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  line-height: 20px;
+  color: #8c8d96;
+}
+.product-info-price .info-point strong {
+  color: #3da5f5;
+}
+.product-info-delivery {
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 24px;
+  color: #3f4150;
+  padding-top: 11px;
+  border-top: 1px solid #e0e2e7;
+}
+.product-info-delivery span {
+  display: block;
+  margin-bottom: 2px;
+}
+@media screen and (min-width: 720px) {
+  .product-info {
+    padding: 0;
+  }
+  .product-info-header .info-brand {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .product-info-header .info-title {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    line-height: 34px;
+    margin-bottom: 8px;
+  }
+  .product-info-header .info-review .star-rating {
+    font-size: 16px;
+  }
+  .product-info-header .info-review p strong {
+    margin-right: -3px;
+  }
+  .product-info-price .info-price-wrapper {
+    align-items: flex-end;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+  }
+  .product-info-price .discount-rate {
+    align-items: flex-end;
+    margin-right: 16px;
+  }
+  .product-info-price .discount-rate .rate {
+    font-size: 44px;
+    line-height: 36px;
+  }
+  .product-info-price .discount-rate .percent {
+    line-height: 1;
+  }
+  .product-info-price .info-sale-price {
+    margin-bottom: 0;
+  }
+  .product-info-price .info-sale-price .price-32 {
+    margin-right: 8px;
+  }
+  .product-info-price .info-point {
+    margin-bottom: 20px;
+  }
+  .product-info-delivery {
+    padding-top: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e2e7;
+  }
+  .product-info-delivery span {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-info {
+    margin-bottom: 20px;
+  }
+}
+
+.order-form {
+  margin-bottom: 40px;
+}
+.order-form .order-inputs {
+  margin-bottom: 20px;
+}
+.order-form .order-inputs .select-group {
+  margin-bottom: 8px;
+}
+.order-form .order-inputs .select-group:last-child {
+  margin-bottom: 0;
+}
+.order-form .order-summary {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.order-form .order-summary dt {
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  line-height: 20px;
+  color: #191a20;
+  font-weight: 700;
+}
+.order-form .button-group {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.order-form .button-group button {
+  width: 50%;
+  margin-right: 8px;
+}
+.order-form .button-group button:last-child {
+  margin-right: 0;
 }
 
 .container {
