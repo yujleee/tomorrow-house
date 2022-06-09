@@ -19,7 +19,6 @@
     @include position-center-y;
     position: absolute;
     right: -#{$grid-margin};
-    background-color: hotpink;
     transition: opacity 200ms ease-in-out;
 
     &:active {
