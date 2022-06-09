@@ -102,7 +102,8 @@ dist
 
 # TernJS port file
 .tern-port
-.sass-cache/e3d0a14317fdde1d59faca95e111e95a26db99e1/_product-tab.scssc
-.sass-cache/e3d0a14317fdde1d59faca95e111e95a26db99e1/_product-tab.scssc
-styles.css
-styles.css.map
+
+# css
+.sass-cache/
+*.css
+*.css.map
