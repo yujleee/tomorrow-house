@@ -1,0 +1,98 @@
+.review-card {
+  padding: 20px 0;
+
+  &-header {
+    @include flexbox(start);
+    margin-bottom: 20px;
+
+    .profile-24,
+    .username {
+      &:active {
+        opacity: 0.4;
+      }
+    }
+
+    .profile-24 {
+      margin-right: 8px;
+    }
+
+    .username {
+      @include text-style(13, $color-gray-primary);
+
+      strong {
+        font-weight: 400;
+      }
+    }
+
+    .detail {
+      @include flexbox(start);
+      @include text-style(12, $color-gray-secondary);
+
+      .star-rating-13 {
+        margin-right: 4px;
+      }
+
+      time::after {
+        margin-left: 3px;
+        content: '·';
+      }
+    }
+  }
+
+  &-body {
+    margin-bottom: 20px;
+
+    p {
+      @include text-style(13, $color-gray-primary);
+    }
+  }
+
+  &-footer {
+    @include flexbox(start);
+
+    button {
+      width: 120px;
+    }
+
+    p {
+      @include text-style(12, $color-gray-primary);
+      margin-left: 8px;
+
+      strong {
+        font-weight: 400;
+
+        span {
+          font-weight: 700;
+          color: $color-gray-heading;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    padding: 40px 0 40px 32px;
+
+    &-header {
+      margin-left: -32px;
+
+      .username {
+        @include text-style(14);
+      }
+    }
+
+    &-body {
+      p {
+        @include text-style(14);
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .profile-24,
+    .username {
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+}
