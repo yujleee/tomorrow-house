@@ -1134,7 +1134,7 @@
             <div class="product-section-divider sm-only" aria-hidden></div> -->
 
             <section
-              class="product-section product-inquiry"
+              class="product-section product-inquiry is-open"
               id="product-inquiry"
               role="tabpanel"
             >
@@ -1142,6 +1142,13 @@
                 <h1 class="title">문의</h1>
                 <strong class="badge" aria-label="96개">96</strong>
                 <a class="text-button" href="/">문의하기</a>
+                <button
+                  class="icon-button sm-only"
+                  type="button"
+                  aria-label="더보기"
+                >
+                  <i class="ic-chevron" aria-hidden></i>
+                </button>
               </header>
 
               <div class="product-section-content">
@@ -1266,6 +1273,19 @@
                     </article>
                   </li>
                 </ol>
+
+                <div class="pagenation">
+                  <ol class="page-list">
+                    <li class="page-item is-active"><a href="/">1</a></li>
+                    <li class="page-item"><a href="/">2</a></li>
+                    <li class="page-item"><a href="/">3</a></li>
+                    <li class="page-item"><a href="/">4</a></li>
+                    <li class="page-item"><a href="/">5</a></li>
+                  </ol>
+                  <button class="page-control page-next">
+                    <i class="ic-chevron"></i>
+                  </button>
+                </div>
               </div>
             </section>
             <div class="product-section-divider sm-only" aria-hidden></div>
