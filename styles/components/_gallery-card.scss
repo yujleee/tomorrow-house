@@ -42,11 +42,29 @@
       @include text-style(16, $color-white);
     }
 
+    .profile-32,
+    .username {
+      transition: opactiy 300ms ease-in-out;
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
+
     .username {
       @include truncate();
       flex-grow: 1;
       padding-right: 8px;
       font-weight: 700;
+    }
+  }
+
+  @include responsive(D) {
+    &-detail {
+      .profile-32:hover,
+      .username:hover {
+        opacity: 0.4;
+      }
     }
   }
 }
