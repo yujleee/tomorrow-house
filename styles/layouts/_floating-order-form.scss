@@ -1,7 +1,14 @@
 .floating-order-form {
+  $global-head-area-height: $gnb-height-md + $lnb-height-md +
+    $product-tab-height-md;
+
   @include flexbox(start, start);
+  position: sticky;
+  top: $global-head-area-height;
   flex-direction: column;
-  //   height: 700px; // 임시값
+  max-height: calc(100vh - #{$global-head-area-height});
+  min-height: calc(100vh - #{$global-head-area-height + $global-footer-height});
+  padding: 24px 0;
 
   > * {
     width: 100%;
