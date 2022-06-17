@@ -16,6 +16,12 @@
     width: 72px;
     margin-right: 4px;
 
+    &.is-active {
+      i {
+        color: $color-blue-primary;
+      }
+    }
+
     i {
       font-size: 24px;
       color: $color-gray-primary;
