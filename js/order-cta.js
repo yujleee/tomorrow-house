@@ -15,5 +15,4 @@ function closeOrderModal() {
 }
 
 buyButton.addEventListener('click', openOrderModal);
-
 orderModalOverlay.addEventListener('click', closeOrderModal);
