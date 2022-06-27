@@ -55,16 +55,6 @@ const productTabPanelList = productTabPanelIdList.map((panelId) => {
 
 const productTabPanelPositionMap = {};
 
-function detectTabPanelPosition() {
-  productTabPanelList.forEach((panel) => {
-    const id = panel.getAttribute('id');
-    const position = window.scrollY + panel.getBoundingClientRect().top;
-    productTabPanelPositionMap[id] = position;
-  });
-
-  updateActiveTabOnScroll();
-}
-
 function updateActiveTabOnScroll() {
   // 스크롤 위치에 따라서 active tab 업데이트
   // 1. 현재 유저가 얼만큼 스크롤을 했는지? => window.scrollY
@@ -115,6 +105,16 @@ function updateActiveTabOnScroll() {
   }
 }
 
+function detectTabPanelPosition() {
+  productTabPanelList.forEach((panel) => {
+    const id = panel.getAttribute('id');
+    const position = window.scrollY + panel.getBoundingClientRect().top;
+    productTabPanelPositionMap[id] = position;
+  });
+
+  updateActiveTabOnScroll();
+}
+
 window.addEventListener('load', detectTabPanelPosition);
-window.addEventListener('resize', detectTabPanelPosition);
-window.addEventListener('scroll', updateActiveTabOnScroll);
+window.addEventListener('resize', _.throttle(detectTabPanelPosition, 1000));
+window.addEventListener('scroll', _.throttle(updateActiveTabOnScroll, 300));
