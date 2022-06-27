@@ -55,9 +55,43 @@ function detectTabPanelPosition() {
     const position = window.scrollY + panel.getBoundingClientRect().top;
     productTabPanelPositionMap[id] = position;
   });
+}
 
-  console.log(productTabPanelPositionMap);
+function updateActiveTabOnScroll() {
+  // 스크롤 위치에 따라서 active tab 업데이트
+  // 1. 현재 유저가 얼만큼 스크롤을 했는지? => window.scrollY
+  // 2. 각 tabPanel의 y축 위치 => productTabPanelPositionMap
+
+  const scrolledAmount =
+    window.scrollY +
+    (window.innerWidth >= 768
+      ? TOP_HEADER_DESKTOP + 80
+      : TOP_HEADER_MOBILE + 8);
+  let newActiveTab;
+
+  if (scrolledAmount >= productTabPanelPositionMap['product-recommendation']) {
+    newActiveTab = productTabList[4];
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-shipment']) {
+    newActiveTab = productTabList[3];
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-inquiry']) {
+    newActiveTab = productTabList[2];
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-review']) {
+    newActiveTab = productTabList[1];
+  } else {
+    newActiveTab = productTabList[0];
+  }
+
+  if (newActiveTab) {
+    newActiveTab = newActiveTab.parentNode;
+
+    if (newActiveTab !== currentActiveTab) {
+      newActiveTab.classList.add('is-active');
+      currentActiveTab.classList.remove('is-active');
+      currentActiveTab = newActiveTab;
+    }
+  }
 }
 
 window.addEventListener('load', detectTabPanelPosition);
 window.addEventListener('resize', detectTabPanelPosition);
+window.addEventListener('scroll', updateActiveTabOnScroll);
