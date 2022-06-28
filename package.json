@@ -24,6 +24,14 @@
     "sass": "^1.51.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "babel-eslint": "^10.1.0",
+    "cssnano": "^5.1.12",
+    "fs-extra": "^10.1.0",
+    "gh-pages": "^4.0.0",
+    "imagemin": "^8.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "postcss": "^8.4.14",
     "sass-lint": "^1.13.1"
   }
 }
