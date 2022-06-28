@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "sass stytles/main.scss:styles.css",
     "watching": "sass --watch styles/main.scss:styles.css",
-    "noMap": "sass --no-source-map styles/main.scss styles.css"
+    "noMap": "sass --no-source-map styles/main.scss styles.css",
+    "build": "node ./scripts/build.js",
+    "deploy": "node ./scripts/build.js && node ./scripts/deploy.js"
   },
   "repository": {
     "type": "git",
